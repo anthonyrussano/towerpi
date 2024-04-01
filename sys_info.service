@@ -1,0 +1,12 @@
+[Unit]
+Description=OLED Display
+After=multi-user.target
+
+[Service]
+Type=simple
+User=anthony
+ExecStart=/usr/bin/python3 /home/anthony/luma.examples/examples/sys_info_extended.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
